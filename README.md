@@ -174,3 +174,12 @@ shortDeclarationOfVariables.go
 	var length, width float64 = 1.2, 2.4
     fmt.Println(length*quantity)
 
+Ця помилка вирішується перетворенням значення одного типу в інший.
+
+    var myInt int = 2
+    float64(myInt)
+
+float64 - це тип до якого потрібно перетворити, а myInt - те що перетворюємо.
+В результаті ми отримуємо нове значення потрібного типу. (transformation.go)
+
+conversionExercise.go - завдання з книги по перетворенню.
