@@ -2,7 +2,7 @@
 package main
 
 import (
-	"Head_First_Go/chapter_4/keyboardGO/go/src/keyboard"
+	"Head_First_Go/chapter_4/keyboardGO/src/keyboard"
 	"fmt"
 	"log"
 )
