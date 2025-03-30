@@ -2,9 +2,9 @@
 package main
 
 import (
+	"Head_First_Go/c5/averageGO/src/github.com/headfirstgo/datafile"
 	"fmt"
 	"log"
-	"netmonitor/Head_First_Go/c5/averageGO/src/github.com/headfirstgo/datafile"
 )
 
 func main() {
