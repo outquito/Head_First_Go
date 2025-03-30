@@ -7,20 +7,19 @@ import (
 )
 
 //читає значення float64 з кожного рядка файлу
-func GetFloats(fileName string) ([3]float64, error) {
-	var numbers [3]float64 //оголошення повертаного масиву
+func GetFloats(fileName string) ([]float64, error) {
+	var numbers []float64 //оголошення повертаного масиву
 	file, err := os.Open(fileName) //відкриваємо файл
 	if err != nil {
 		return numbers, err
 	}
-	i := 0 //змінна для збереження індексу, по якому має виконуватися зміни
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		numbers[i], err = strconv.ParseFloat(scanner.Text(), 64)
+		number, err := strconv.ParseFloat(scanner.Text(), 64)
 		if err != nil {
 			return numbers, err
 		}
-		i++ //перехід до наступного індексу масиву
+		numbers = append(numbers, number) //перехід до наступного індексу масиву, нове значення до сегменту
 	}
 	err = file.Close()
 	if err != nil {
